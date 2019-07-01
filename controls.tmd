@@ -190,10 +190,6 @@
 
 
 
-			
-			
-			
- 
             <[control_input][EmergencyCanopyReleaseLeftAngle][]
                 <[uint32][InputID][EmergencyCanopyReleaseLeft.Output]>
                 <[float64][Scaling][-1.4]>
