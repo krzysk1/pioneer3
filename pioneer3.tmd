@@ -1,4 +1,12 @@
 <[file][][]
+
+	//-------------------------------------
+	// Plane: JIM MARSKE Pioneer 3 towing version
+	// Made by krzysk (at) wp.pl
+	// 3D model by Yusuke Kanemoto
+	// Date: Sat Aug 09 2014; July 2019
+	//-------------------------------------
+
     <[modelmanager][][]
         <[pointer_list_tmuniverse][DynamicObjects][]
             <[telemetry][Telemetry][]
@@ -586,14 +594,17 @@
                 <[string8][Input][Controls.HookRelease]>
             >
             <[input_control][CockpitInput][]
-                <[string8][Input][Controls.Canopy]>
+                <[string8][Input][Controls.Flaps]>
             >
-            <[input_default][VarioVolumeInput][]
+            <[input_default][VarioVolume][]
                 <[string8][Input][Audio.Variometer]>
                 <[uint][Positions][11]>
                 <[tmvector2d][Range][ 0.0 1.0 ]>
                 <[float64][Value][0.4]>
             >
+            <[output_free][VarioVolumeOutput][]
+                <[string8][Input][VarioVolume.Output]>
+            >			
             <[servoclassic][ServoAirBrake][]
                 <[string8][Input][AirBrakeInput.Output]>
                 <[float64][Speed][5.0]>
@@ -724,9 +735,6 @@
                 <[float64][Position][0.0]>
                 <[float64array][InputPosition][  -5.0 0.0 5.0 ]>
                 <[float64array][OutputPosition][ -5.0 0.0 5.0 ]>
-            >
-            <[output][VarioVolume][]
-                <[string8][Input][VarioVolumeInput.Output]>
             >
             <[heading_indicator][HeadingIndicator][]
                 <[string8][Body][Fuselage]>

@@ -4,7 +4,7 @@
         <[vec32array][ContactSpheres][ (0.7615 0.0 -0.1788 0.130) (0.1803 0.0 -0.1249 0.122) (0.5254  7.1014 0.3645 0.030) (0.5254  -7.1014 0.3645 0.030) ]>
         <[string8][DisplayName][Marske Pioneer 3]>
         <[string8][DescriptionTextEN][15 Meter Sport Sailplane. Jim Marske's latest design. Manufactured by Kollman Composites. Fiberglass construction with carbon and Kevlar reinforced cockpit. Graphlite carbon wing spars for strong consistant wings. L/D 42:1  Minumun sink 100 ft /Min, Vne 150 mph, Vb 130 mph, Vs (stall) 38 mph, Empty Weight 345 lb, Ballast 200 lb. Optional BRS installed.
-		Made by Krzysztof Kaniewski. Original 3D model made by Yusuke Kanemoto.]>
+Made by Krzysztof Kaniewski. Original 3D model made by Yusuke Kanemoto.]>
 		<[float64][WingSpan][15.0]>
 		<[float64][Mass][202]>
 		<[float64][MaximumSpeed][65.0]>
