@@ -1,0 +1,24 @@
+<[file][][]
+    <[hints][][]
+        // Marske Pioneer 3
+        <[float64][MaximumTakeOffMass][356.0]>
+        <[float64][WingSpan][15.2]>
+        <[float64][WingArea][10.5]>
+        <[float64][ApproachSpeed][30.6]>
+        <[float64][PatternSpeed][33.3]>
+        <[float64][InitialClimbSpeed][33.3]>
+        <[float64][MaximumGearExtensionSpeed][72.2]>
+        <[float64][GlideRatio][50.0]>
+        <[bool][Glider][true]>
+        <[bool][TailDragger][true]>
+        <[float64][AirBrakeTrimFactor][100.0]>
+        <[float64][ElevatorGain][1.0]>
+        <[float64][AileronGain][1.0]>
+        <[float64][NormalBank][0.523598771542]>
+        <[float64][MaximumBank][1.39626339078]>
+        <[float64][MaximumRollRate][0.3]>
+        <[float64][RudderGain][2.0]>
+        <[float64][RudderCrossWind][0.5]>
+        <[float64][FlareHeightScaling][0.9]>
+    >
+>
