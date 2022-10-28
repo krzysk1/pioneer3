@@ -1191,8 +1191,8 @@
             <[texture_animation_map_display][DisplayMap][]
                 <[uint32][PositionID][Canopy.R]>
                 <[uint32][OrientationID][Canopy.Q]>
-                <[tmvector2d][TargetPosition][ 0 0 ]>
-                <[tmvector2d][TargetSize][ 512 512 ]>
+                <[tmvector2d][TargetPosition][ 0.0 0.0 ]>
+                <[tmvector2d][TargetSize][ 1.0 1.0 ]>
                 <[tmvector2d][TargetScale][ 512 512 ]>
                 <[string8][InputZoom][GPSZoom.Output]>
             >
