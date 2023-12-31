@@ -3,3 +3,14 @@
 
 Made by Krzysztof Kaniewski. 
 3D model by Yusuke Kanemoto.
+
+ Some features may not work as intended and this aircraft could crash your Aerofly FS4. 
+ Use it at your own risk!
+ 
+# Installation
+
+1. Unzip file and move the folder "pioneer3" into the C:\Users\~\Documents\Aerofly FS 4\aircraft folder.
+
+# Uninstall
+
+1. Delete the folder "pioneer3".

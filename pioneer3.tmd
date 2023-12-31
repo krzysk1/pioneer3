@@ -4,7 +4,8 @@
 	// Plane: JIM MARSKE Pioneer 3
 	// Made by Krzysztof Kaniewski
 	// 3D model by Yusuke Kanemoto
-	// Date: Aug 2014 - Aug 2022
+	// The model is currently licensed under Creative Commons CC BY-NC 4.0
+	// Date: Aug 2014 - Aug 2022 - May 2023
 	//-------------------------------------
 
     <[modelmanager][][]
@@ -154,6 +155,7 @@
                 <[string8][Geometry][Bulge1Left1]>
                 <[float64][StaticFrictionCoefficient][1.0]>
                 <[float64][KineticFrictionCoefficient][0.4]>
+                <[bool][NoCrash][true]>
             >
             <[collisionhull][CollisionRightWing][]
                 <[float64][K][78000]>
@@ -162,6 +164,7 @@
                 <[string8][Geometry][Rw31]>
                 <[float64][StaticFrictionCoefficient][1.0]>
                 <[float64][KineticFrictionCoefficient][0.4]>
+                <[bool][NoCrash][true]>
             >
             <[rigidbody][Canopy][]
                 <[float64][Mass][2.0]>
