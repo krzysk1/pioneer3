@@ -12,8 +12,12 @@
         <[pointer_list_tmuniverse][DynamicObjects][]
             <[telemetry][Telemetry][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][LookAtPosition][ 0.3 0.0 0.1 ]>
+                <[tmvector3d][LookAtPosition][ 0.256 0.000 0.169 ]>
             >
+            <[sender][SenderMass][]
+                <[string8][Input][292.4]>
+                <[string8][Message][Aircraft.Mass]>
+            >			
             <[camera][CameraFollow][]
                 <[string8][Description][Behind glider]>
                 <[string8][Body][Fuselage]>
@@ -37,12 +41,6 @@
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][3.0 1.0 1.0]>
                 <[tmvector3d][Direction][-0.905 -0.302 -0.302]>
-            >
-            <[hook][WinchHook][]
-                <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][1.9 0.0 0.0]>  // towing plane
-             //   <[tmvector3d][R0][0.9 0.0 -0.1]> // winch
-                <[string8][ReleaseControl][HookInput.Output]>
             >
             <[rigidbody][Fuselage][]
                 <[float64][Mass][234.8]>
@@ -191,6 +189,7 @@
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][0.180344 0.0 -0.124968]>
                 <[string8][InputBrake][ServoBrake.Output]>
+                <[float64][BrakeStrength][0.1]>
             >
             <[output][GroundRollSpeed][]
                 <[string8][Input][MainWheelHull.Speed]>
@@ -604,9 +603,64 @@
                 <[string8][Input][RudderTrimmedMix.Output]>
                 <[tmvector2d][Range][ -1.0 1.0 ]>
             >
-            <[input_default][HookInput][]
-                <[string8][Message][Controls.HookRelease]>
+            <[event_sound][HookReleaseSoundPull][]
             >
+            <[event_sound][HookReleaseSoundSnap][]
+            >
+            <[input_discrete_momentary][HookRelease][]
+                <[string8][Message][Controls.HookRelease]>
+                <[tmvector2d][Range][ 0.0 1.0 ]>
+                <[string8][EventsUp]  [ HookReleaseSoundPull.Trigger ]>
+                <[string8][EventsDown][ HookReleaseSoundSnap.Trigger ]>
+            >
+            <[output_free][HookReleaseOutput][]
+                <[string8][Input][HookRelease.Output]>
+            >
+
+            <[hook_release][WinchHookReleased][]
+                <[string8][Body][Fuselage]>
+                <[tmvector3d][R0][ 0.9 0.0 -0.1 ]>
+                <[tmvector3d][Direction][ -1.0 0.0 -0.1 ]>
+                <[string8][Input][HookRelease.Output]>
+                <[float64][AutoReleaseForce][5.0]>
+                <[float64][WeakLink][10000.0]>
+            >
+            <[sender][SenderWinchConnected][]
+                <[string8][Input][WinchHookReleased.OutputConnected]>
+                <[string8][Message][Aircraft.WinchConnected]>
+            >
+            <[attachment_point][WinchHookAttachmentPoint][]
+                <[string8][Body][Fuselage]>
+                <[tmvector3d][R0][ 0.9 0.0 -0.1 ]>
+            >
+            <[event_sound][HookReleaseSoundAuto][]
+            >
+            <[event_edge_falling][HookAutoReleaseSound][]
+                <[string8][Input][WinchHookReleased.OutputConnected]>
+                <[string8][Events][ HookReleaseSoundAuto.Trigger ]>
+                <[float64][Value][0.0]>
+            >
+
+            <[hook_release][TowHookReleased][]
+                <[string8][Body][Fuselage]>
+                <[tmvector3d][R0][ 1.9 0.0 0.0 ]>
+                <[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
+                <[string8][Input][HookRelease.Output]>
+                <[float64][WeakLink][5000.0]>
+            >
+            <[sender][SenderTowConnected][]
+                <[string8][Input][TowHookReleased.OutputConnected]>
+                <[string8][Message][Aircraft.TowConnected]>
+            >
+            <[attachment_point][TowHookAttachmentPoint][]
+                <[string8][Body][Fuselage]>
+                <[tmvector3d][R0][ 1.9 0.0 0.0 ]>
+            >
+            <[attachment_point][WingHolderAttachmentPoint][]
+                <[string8][Body][LeftWing]>
+                <[tmvector3d][R0][ 0.55 7.1 0.44 ]>
+            >
+			
             <[input_binary][CockpitInput][]
                 <[string8][Message][Controls.Flaps]>
             >
@@ -2005,6 +2059,53 @@
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][glider_high_g.wav]>
             >
+
+            <[soundinput][HookReleaseSoundPull][]
+                <[string8][InputID][HookReleaseSoundPull.Output]>
+            >
+            <[sound_multi][SoundHookReleasePull][]
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
+                <[string8][InputTrigger][HookReleaseSoundPull.Output]>
+                <[string8][InputVolume] [0.4]>
+                <[string8][InputPitch]  [0.7]>
+                <[string8][SoundFile]   [click.wav]>
+                <[tmvector3d][R0][ 1.94828 0.2343 -0.16616 ]>
+                <[float64][Radius][0.5]>
+                <[float64][Range][4.0]>
+                <[bool][External][false]>
+            >
+            <[soundinput][HookReleaseSoundSnap][]
+                <[string8][InputID][HookReleaseSoundSnap.Output]>
+            >
+            <[sound_multi][SoundHookReleaseSnap][]
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
+                <[string8][InputTrigger][HookReleaseSoundSnap.Output]>
+                <[string8][InputVolume] [0.4]>
+                <[string8][InputPitch]  [0.7]>
+                <[string8][SoundFile]   [click.wav]>
+                <[tmvector3d][R0][ 1.94828 0.2343 -0.16616 ]>
+                <[float64][Radius][0.5]>
+                <[float64][Range][4.0]>
+                <[bool][External][false]>
+            >
+            <[soundinput][HookReleaseSoundAuto][]
+                <[string8][InputID][HookReleaseSoundAuto.Output]>
+            >
+            <[sound_multi][SoundHookReleaseAuto][]
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
+                <[string8][InputTrigger][HookReleaseSoundAuto.Output]>
+                <[string8][InputVolume] [0.2]>
+                <[string8][InputPitch]  [0.5]>
+                <[string8][SoundFile]   [click.wav]>
+                <[tmvector3d][R0][ 0.609 0.098 -0.55 ]>
+                <[bool][External][false]>
+            >			
         >
     >
 >

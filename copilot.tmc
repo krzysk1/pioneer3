@@ -9,6 +9,9 @@
         <[float64][InitialClimbSpeed][33.3]>
         <[float64][MaximumGearExtensionSpeed][72.2]>
         <[float64][GlideRatio][50.0]>
+        <[string8][AutoPilotType][]>
+        <[int][EngineCount][1]>
+        <[bool][GeneralAviation][true]>	
         <[bool][Glider][true]>
         <[bool][TailDragger][true]>
         <[float64][AirBrakeTrimFactor][100.0]>
