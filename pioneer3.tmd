@@ -5,7 +5,7 @@
 	// Made by Krzysztof Kaniewski
 	// 3D model by Yusuke Kanemoto
 	// The model is currently licensed under Creative Commons CC BY-NC 4.0
-	// Date: Aug 2014 - Aug 2022 - May 2023
+	// Date: Aug 2014 (AFS1) - Aug 2022 (AFS4) - May 2023 - Nov 2024
 	//-------------------------------------
 
     <[modelmanager][][]
@@ -17,7 +17,7 @@
             <[sender][SenderMass][]
                 <[string8][Input][292.4]>
                 <[string8][Message][Aircraft.Mass]>
-            >			
+            >
             <[camera][CameraFollow][]
                 <[string8][Description][Behind glider]>
                 <[string8][Body][Fuselage]>
@@ -661,7 +661,7 @@
                 <[string8][Body][LeftWing]>
                 <[tmvector3d][R0][ 0.55 7.1 0.44 ]>
             >
-			
+
             <[input_binary][CockpitInput][]
                 <[string8][Message][Controls.Flaps]>
             >
@@ -2106,7 +2106,7 @@
                 <[string8][SoundFile]   [click.wav]>
                 <[tmvector3d][R0][ 0.609 0.098 -0.55 ]>
                 <[bool][External][false]>
-            >			
+            >
         >
     >
 >

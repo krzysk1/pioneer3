@@ -9,12 +9,13 @@
         <[float64][InitialClimbSpeed][33.3]>
         <[float64][MaximumGearExtensionSpeed][72.2]>
         <[float64][GlideRatio][43.0]>
-        <[bool][GeneralAviation][true]>	
+        <[int][EngineCount][0]>		
+        <[bool][GeneralAviation][true]>
         <[bool][Glider][true]>
         <[bool][TailDragger][true]>
-        <[float64][PitchTrimTakeOff][0.0]>
-        <[float64][PitchTrimWinch][0.0]>
-        <[float64][PitchTrimTow][0.0]>		
+        <[float64][PitchTrimTakeOff][0.1]>
+        <[float64][PitchTrimWinch][0.1]>
+        <[float64][PitchTrimTow][0.1]>
         <[float64][AirBrakeTrimFactor][100.0]>
         <[float64][ElevatorGain][1.0]>
         <[float64][AileronGain][1.0]>
