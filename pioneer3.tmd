@@ -145,6 +145,7 @@
                 <[string8][Geometry][Lw11]>
                 <[float64][StaticFrictionCoefficient][1.0]>
                 <[float64][KineticFrictionCoefficient][0.4]>
+                <[bool][NoCrash][true]>
             >
             <[collisionhull][CollisionLeftWing][]
                 <[float64][K][78000]>
@@ -1358,7 +1359,7 @@
 			// Variometer
             <[graphics_input][VerticalSpeedInput][]
                 <[uint32][InputID][VerticalSpeed.Output]>
-                <[float64][Scaling][1]>
+                <[float64][Scaling][1.96848]>
             >
             <[graphics_linear_interpolation][VerticalSpeedMapping][]
                 <[string8][Input][VerticalSpeedInput.Output]>

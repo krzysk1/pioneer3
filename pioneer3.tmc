@@ -7,15 +7,15 @@
         <[string8][DisplayNameFull][Marske Pioneer 3]>
         <[list_localized_text][Descriptions][]
             <[localized_text][element][0]
-                <[string8][Language][en]>
+                <[string8u][Language][en]>
                 <[string8][Text][15 Meter Sport Sailplane. Jim Marske's latest design. Manufactured by Kollman Composites. Fiberglass construction with carbon and Kevlar reinforced cockpit. Graphlite carbon wing spars for strong consistant wings. Made by Krzysztof Kaniewski. Original 3D model made by Yusuke Kanemoto.]>
             >
             <[localized_text][element][1]
-                <[string8][Language][de]>
+                <[string8u][Language][de]>
                 <[string8][Text][Der Nurflügel Pioneer III ist ein modernes Leistungssegelflugzeug, das von Jim Marske aus dem Pioneer IId entwickelt wurde. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Yusuke Kanemoto.]>
 			>
             <[localized_text][element][2]
-                <[string8][Language][pl]>
+                <[string8u][Language][pl]>
                 <[string8][Text][15-metrowy sportowy szybowiec. Najnowszy projekt Jima Marske. Wyprodukowany przez Kollman Composites. Konstrukcja z włókna szklanego z kokpitem wzmocnionym włóknem węglowym i kevlarem. Grafitowo-węglowe dźwigary skrzydeł zapewniają stabilność skrzydeł. Wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D wykonany przez Yusuke Kanemoto.]>
 			>
         >
@@ -26,17 +26,16 @@
         <[float64][ApproachAirspeed][33.3]>
         <[float64][CruiseAirspeed][55.6]>
         <[float64][CruiseSpeed][85.6]>
-		<[tmvector2d][NormalAirspeedRange][ 18.5 56.5 ]>
-		<[tmvector2d][CautionAirspeedRange][ 56.5 65.0 ]>
-		<[tmvector2d][FlapAirspeedRange][ 0.0 0.0 ]>
+		<[vector2_float64][NormalAirspeedRange][ 18.5 56.5 ]>
+		<[vector2_float64][CautionAirspeedRange][ 56.5 65.0 ]>
+		<[vector2_float64][FlapAirspeedRange][ 0.0 0.0 ]>
         <[float64][MaximumAltitude][0.0]>
         <[float64][CruiseAltitude][0.0]>
         <[float64][MaximumTakeoffMass][318.0]>
-        <[float64][MaximumRange][0.0]>
         <[float64][MaximumGlideRatio][43.0]>
-        <[uint][UnitsBuilt][13]>
-        <[uint][EngineCount][0]>
-        <[uint][Year][2011]>
+        <[uint32][UnitsBuilt][13]>
+        <[uint32][EngineCount][0]>
+        <[uint32][Year][2011]>
         <[string8][Tags][ airplane glider gear winch_hook tow_hook ]>
 		<[string8][Pilot][]>
     >
