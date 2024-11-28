@@ -1478,7 +1478,7 @@
                 <[string8][Input][ServoRudderInput.Output]>
                 <[tmvector2d][Map][(-1.0 0.349066) (1 -0.087266)]>
             >
-            <[hingedbodygraphics][rud_left_2_5][]
+            <[hingedbodygraphics][LeftPedal][]
                 <[string8][GeometryList][ RudLeft25 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
@@ -1489,16 +1489,16 @@
             <[linkagegraphics][LeftPedalLink][]
                 <[string8][GeometryList][ RudLeft35 ]>
                 <[string8][Graphics0][Fuselage]>
-                <[string8][Graphics1][rud_left_2_5]>
-                <[tmvector3d][Joint0][1.0096 0.268 0.1277]>
-                <[tmvector3d][Joint1][1.6536 0.1046 0.0373]>
-                <[uint32][AttachTo][1]>
+                <[string8][Graphics1][LeftPedal]>
+                <[tmvector3d][Joint0][1.010 0.2685 0.1277]>
+                <[tmvector3d][Joint1][1.654 0.1046 0.0373]>
+                <[uint32][AttachTo][0]>
             >
             <[graphics_linear_interpolation][Cockpit_INNMapping_378][]
                 <[string8][Input][ServoRudderInput.Output]>
                 <[tmvector2d][Map][(-1.0 -0.087266) (1.0 0.349066)]>
             >
-            <[hingedbodygraphics][rud_right_2_5][]
+            <[hingedbodygraphics][RightPedal][]
                 <[string8][GeometryList][ RudRight25 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
@@ -1509,10 +1509,10 @@
             <[linkagegraphics][RightPedalLink][]
                 <[string8][GeometryList][ RudRight35 ]>
                 <[string8][Graphics0][Fuselage]>
-                <[string8][Graphics1][rud_right_2_5]>
-                <[tmvector3d][Joint0][1.0096 -0.268 0.1277]>
-                <[tmvector3d][Joint1][1.6536 -0.1043 0.0373]>
-                <[uint32][AttachTo][1]>
+                <[string8][Graphics1][RightPedal]>
+                <[tmvector3d][Joint0][1.010 -0.2685 0.1277]>
+                <[tmvector3d][Joint1][1.654 -0.1043 0.0373]>
+                <[uint32][AttachTo][0]>
             >
 			//Pedals spring
             <[graphics_linear_interpolation][Cockpit_INNMapping_402][]
@@ -1864,22 +1864,13 @@
                 <[string8][Graphics][Yoke2_5]>
             >
 			//Air brake Lever
-            <[graphics_input][AirBrakeLeverInput][]
-                <[uint32][InputID][ServoAirBrake.Output]>
-            >
-            <[graphics_linear_interpolation][AirBrakeLeverMapping][]
-                <[string8][Input][AirBrakeLeverInput.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (1.0 0.066555)]>
-            >
-            <[graphics_translation][AirBrakeLeverMoving][]
-                <[string8][Input][AirBrakeLeverMapping.Output]>
-                <[tmvector3d][Axis][-0.0659 0.0081 -0.0046]>
-            >
-            <[rigidbodygraphics][speedbrake_5][]
+            <[movinggraphics][speedbrake_5][]
                 <[string8][GeometryList][ Speedbrake5 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[string8][InputTransform][AirBrakeLeverMoving.Output]>
+                <[uint32][InputID][ServoAirBrake.Output]>
+                <[tmvector3d][Axis][-0.0659 0.0081 -0.0046]>
+                <[float64][Scaling][1]>  //0.066555 if normailzed
             >
         >
         <[pointer_list_tmsound][SoundObjects][]
