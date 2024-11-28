@@ -165,6 +165,16 @@
                 <[float64][KineticFrictionCoefficient][0.4]>
                 <[bool][NoCrash][true]>
             >
+            <[collisionhull][CollisionFrontSkid][]
+                <[float64][K][78000]>
+                <[float64][D][1170]>
+                <[string8][Body][Fuselage]>
+                <[string8][Geometry][Skid1]>
+                <[float64][StaticFrictionCoefficient][1.0]>
+                <[float64][KineticFrictionCoefficient][0.4]>
+                <[bool][NoCrash][true]>
+            >			
+
             <[rigidbody][Canopy][]
                 <[float64][Mass][2.0]>
                 <[tmvector3d][InertiaLength][ 1.67 0.65 0.4 ]>
@@ -950,7 +960,7 @@
                 <[string8][GeometryList][ RRudp1 ]>
                 <[string8][Graphics0][Fuselage]>
                 <[string8][Graphics1][Rudder]>
-                <[tmvector3d][Joint0][-1.0804 -0.0584 0.2639]>
+                <[tmvector3d][Joint0][-1.0800 -0.0880 0.2617]> 
                 <[tmvector3d][Joint1][-1.3811 -0.0625 0.3167]>
                 <[uint32][AttachTo][1]>
             >
@@ -958,7 +968,7 @@
                 <[string8][GeometryList][ LRudp1 ]>
                 <[string8][Graphics0][Fuselage]>
                 <[string8][Graphics1][Rudder]>
-                <[tmvector3d][Joint0][-1.0804 0.0584 0.2639]>
+                <[tmvector3d][Joint0][-1.0800 0.0885 0.2617]>
                 <[tmvector3d][Joint1][-1.3811 0.0625 0.3167]>
                 <[uint32][AttachTo][1]>
             >
