@@ -24,13 +24,13 @@
                     <[string8][Qualifiers][step]>
                     <[float64][Value][1.0]>
                 >
-                <[float64][Radius][0.008]>
-                <[float64][Length][0.015]>
+                <[float64][Radius][0.0063]>
+                <[float64][Length][0.0154]>
             >
             // vario volume switch
             <[control_cylinder][VarioVolumeSwitch][14]  
                 <[string8][Type][switch toggle]>
-                <[vector3_float64][R0][1.0882 0.1699 0.2906]>
+                <[vector3_float64][R0][1.078 0.1699 0.2906]>
                 <[matrix3_float64][B0][ 1.0  0 0   0.0  1.0  0.0   0.0  0.0  1.0 ]>
                 <[vector3_float64][Direction][1.0 0.0 0.0 ]>
                 <[float64][StepDistance][0.01]>
@@ -40,7 +40,7 @@
                     <[string8][Qualifiers][step]>
                     <[float64][Value][1.0]>
                 >
-                <[float64][Radius][0.004]>
+                <[float64][Radius][0.003]>
                 <[float64][Length][0.024]>
             >
 			// map zoom			
@@ -78,7 +78,7 @@
                 <[tmvector3d][Pivot][0.8456 0.0 -0.1277]>
                 <[string8][InputTransform][StickElevatorRotation.Output]>
             >
-            <[control_cylinder][StickGrip][114]
+            <[control_cylinder][StickGrip][]
                 <[string8][Type][stick]>
                 <[vector3_float64][R0][ 0.8713 0.0 0.1248 ]>
                 <[matrix3_float64][B0][ 0.0  0.0  1.0  0.0  1.0  0.0 -1.0  0.0 0.0 ]>
@@ -96,32 +96,46 @@
                     <[string8][Qualifiers][step]>
                     <[float64][Value][10.0]>
                 >
-                <[float64][Radius][0.03]>
-                <[float64][Length][0.10]>
+                <[float64][Radius][0.0127]>
+                <[float64][Length][0.1034]>
             >
+            <[control_cylinder][StickPushToTalk][]
+                <[string8][Type][button]>
+                <[tmvector3d][R0][ 0.874 0.0 0.175 ]>
+                <[tmmatrix3d][B0][ 0.0 0.0 1.0  0.0 1.0 0.0  -1.0 0.0 0.0 ]>
+                <[string8][InputTransform][StickTransform.Output]>
+                <[vector3_float64][Direction][ 0.0 0.0 -1.0 ]>
+                <[control_message][OnPush][]
+                    <[string8][Message][Communication.PushToTalk]>
+                    <[string8][Qualifiers][event]>
+                    <[float64][Value][1.0]>
+                >
+                <[float64][Radius][0.0087]>
+                <[float64][Length][0.0046]>
+            >			
 			// air brake handle			
             <[control_input][AirBrakeHandleTravel][2]
                 <[uint32][InputID][ServoAirBrake.Output]>
                 <[string8][Scaling][0.066555]>
             >
-            <[control_translation][AirBrakeHandleTranslation][2]
+            <[control_translation][AirBrakeHandleTranslation][]
                 <[string8][Input][AirBrakeHandleTravel.Output]>
                 <[vector3_float64][Axis][-0.0659 0.0081 -0.0046]>
             >
             <[control_cylinder][AirbrakeHandle][2]
                 <[string8][Type][lever]>
                 <[string8][Group][airbrake]>
-                <[vector3_float64][R0][0.8534 0.259 0.09415]>
-                <[tmmatrix3d][B0][ -0.996195 0.009110 0.086678  0.0 0.994522 -0.104528  0.087156 0.104131 0.990737 ]>
-                <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
+                <[vector3_float64][R0][0.8534 0.2485 0.09415]>
+                <[tmmatrix3d][B0][ 0.1250280 -0.4117515  0.9026786  -0.4117515  0.8062346  0.4247899  -0.9026786 -0.4247899 -0.0687374 ]>
+                <[vector3_float64][Direction][ -1.0 0.0 0.0 ]>
                 <[float64][StepDistance][0.0025]>
                 <[string8][InputTransform][AirBrakeHandleTranslation.Output]>
                 <[control_message][OnStep][]
                     <[string8][Message][Controls.GliderAirBrake]>
                     <[string8][Qualifiers][step]>
-                    <[float64][Value][-4.2]>
+                    <[float64][Value][4.2]>
                 >
-                <[float64][Radius][0.04]>
+                <[float64][Radius][0.015]>
                 <[float64][Length][0.092]>
             >
 			// hook release
@@ -147,8 +161,8 @@
                 >
                 <[vector3_float64][Dimensions][0.02 0.025 0.01]>
             >
-			// trim
-            <[control_input][TrimSliderTravel][2]
+			// trim  TODO
+            <[control_input][TrimSliderTravel][]
                 <[uint32][InputID][PitchTrim.Output]>
                 <[string8][Scaling][0.065]>
             >
@@ -171,7 +185,7 @@
                 <[float64][Radius][0.008]>
                 <[float64][Length][0.022]>
             >
-
+			// emergency canopy release TODO
             <[control_input][EmergencyCanopyReleaseLeftAngle][]
                 <[uint32][InputID][EmergencyCanopyReleaseLeft.Output]>
                 <[float64][Scaling][-1.4]>
