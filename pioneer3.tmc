@@ -33,6 +33,7 @@
         <[float64][MaximumGlideRatio] [43.0]>
         <[float64][MaximumAltitude]   [6000.0]>
         <[float64][CruiseAltitude]    [2000.0]>
+		<[vector2_float64][FlapAirspeedRange]   [  0.0  0.0 ]>
 		<[vector2_float64][NormalAirspeedRange] [ 18.5 56.5 ]>
 		<[vector2_float64][CautionAirspeedRange][ 56.5 65.0 ]>
         <[string8][Tags][ airplane glider gear winch_hook tow_hook ]>
